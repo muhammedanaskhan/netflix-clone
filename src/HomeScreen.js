@@ -1,45 +1,29 @@
 import React from 'react';
 import './HomeScreen.css';
 import Nav from "./Nav";
+import Banner from "./Banner";
+import requests from './requests';
 
 function HomeScreen() {
 
     return (
         <div className='homeScreen'>
+            <Nav />     
+            <Banner/>
+            <Row 
+                title ='NETFLIX ORIGINALS'
+                fetchUrl={requests.fetchTrending}
+            />
+            <Row title ='Top Rated' fetchUrl={requests.fetchTopRated} />
+            <Row title ='Action Movies' fetchUrl={requests.fetchActionMovies} />
+            <Row title ='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
+            <Row title ='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
+            <Row title ='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
+            <Row title ='Documentaries' fetchUrl={requests.fetchDocumentaries} />
 
-            {/* Nav*/}
 
-            <Nav>
 
-            </Nav>
 
-            <h1>Testing</h1>
-            <h1>1:00:57</h1>
-            
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-            <h1>Test</h1>
-        
-
-            {/*Bannner */}
-
-            {/* Row*/}
         </div>
     )
 
