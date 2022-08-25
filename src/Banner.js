@@ -9,7 +9,7 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchComedyMovies);
+            const request = await axios.get(requests.fetchNetflixOriginals);
             setMovie(
                 request.data.results[
                     Math.floor(Math.random() * request.data.results.length -1)
@@ -32,7 +32,7 @@ function Banner() {
             backgroundPosition: "center center",
         }}>
 
-            <div className="banner__contents">
+            <div className="banner__contents">0
                 <h1 className="banner_title">
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
